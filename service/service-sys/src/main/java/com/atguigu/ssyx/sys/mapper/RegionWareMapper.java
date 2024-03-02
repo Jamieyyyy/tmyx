@@ -2,17 +2,12 @@ package com.atguigu.ssyx.sys.mapper;
 
 import com.atguigu.ssyx.model.sys.RegionWare;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.stereotype.Repository;
 
-public interface RegionWareMapper {
-    IPage<RegionWare> selectPage(Page<RegionWare> pageParam, LambdaQueryWrapper<RegionWare> wrapper);
+@Repository
+public interface RegionWareMapper extends BaseMapper<RegionWare> {
 
-    Integer selectCount(LambdaQueryWrapper<RegionWare> queryWrapper);
-
-    void updateById(RegionWare regionWare);
-
-    RegionWare selectById(Long id);
-
-    void insert(RegionWare regionWare);
 }

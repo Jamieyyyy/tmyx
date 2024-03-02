@@ -21,6 +21,7 @@ public class WareController {
     @ApiOperation(value = "获取全部仓库")
     @GetMapping("findAllList")
     public Result findAllList() {
-        return Result.ok(wareService.list());
+//        return Result.ok(wareService.list());
+        return Result.ok(null);
     }
 }

@@ -328,6 +328,12 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo> impl
         redisTemplate.delete(RedisConst.SROCK_INFO + orderNo);
     }
 
+    @Override
+    public IPage<SkuInfo> selectPage(Page<SkuInfo> pageParam, SkuInfoQueryVo skuInfoQueryVo) {
+        return null;
+    }
+
+
     //2 遍历skuStockLockVoList得到每个商品，验证库存并锁定库存，具备原子性
     private void checkLock(SkuStockLockVo skuStockLockVo) {
         //获取锁

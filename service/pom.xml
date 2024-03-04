@@ -12,7 +12,7 @@
         <module>service-acl</module>
         <module>service-sys</module>
         <module>service-product</module>
-        <module>service-serch</module>
+        <module>service-search</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 
@@ -51,10 +51,10 @@
         </dependency>
 
         <!-- 服务注册 -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 
         <!-- 服务调用feign -->
         <dependency>

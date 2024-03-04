@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-search
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 118.178.126.76:8848

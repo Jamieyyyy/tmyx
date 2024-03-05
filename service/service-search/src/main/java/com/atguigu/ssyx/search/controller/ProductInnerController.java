@@ -1,10 +1,8 @@
-package com.atguigu.ssyx.controller;
+package com.atguigu.ssyx.search.controller;
 
 import com.atguigu.ssyx.model.product.Category;
 import com.atguigu.ssyx.model.product.SkuInfo;
-import com.atguigu.ssyx.product.service.CategoryService;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 

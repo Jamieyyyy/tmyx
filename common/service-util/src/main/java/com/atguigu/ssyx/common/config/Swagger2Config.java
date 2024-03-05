@@ -23,11 +23,11 @@ import java.util.List;
 @EnableSwagger2WebMvc
 public class Swagger2Config {
 
+    //1
     @Bean
     public Docket webApiConfig(){
         List<Parameter> pars = new ArrayList<>();
         ParameterBuilder tokenPar = new ParameterBuilder();
-        //链式赋值法
         tokenPar.name("userId")
                 .description("用户token")
                 //.defaultValue(JwtHelper.createToken(1L, "admin"))
@@ -43,6 +43,9 @@ public class Swagger2Config {
                 .apiInfo(webApiInfo())
                 .select()
                 //只显示api路径下的页面
+                // /api/user/login
+                // /admin/order/findAll
+                // /add/PERSON/all
                 .apis(RequestHandlerSelectors.basePackage("com.atguigu.ssyx"))
                 .paths(PathSelectors.regex("/api/.*"))
                 .build()
@@ -50,6 +53,7 @@ public class Swagger2Config {
         return webApi;
     }
 
+    //2
     @Bean
     public Docket adminApiConfig(){
         List<Parameter> pars = new ArrayList<>();
@@ -69,7 +73,7 @@ public class Swagger2Config {
                 .select()
                 //只显示admin路径下的页面
                 .apis(RequestHandlerSelectors.basePackage("com.atguigu.ssyx"))
-                .paths(PathSelectors.regex("/admin/.*"))
+                //.paths(PathSelectors.regex("/admin/.*"))
                 .build()
                 .globalOperationParameters(pars);
         return adminApi;

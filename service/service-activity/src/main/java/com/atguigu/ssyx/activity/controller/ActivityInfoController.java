@@ -46,7 +46,7 @@ public class ActivityInfoController {
     public Result save(@RequestBody ActivityInfo activityInfo) {
         activityInfo.setCreateTime(new Date());
         activityInfoService.save(activityInfo);
-        return Result.ok();
+        return Result.ok(null);
     }
 
     @ApiOperation(value = "修改活动")

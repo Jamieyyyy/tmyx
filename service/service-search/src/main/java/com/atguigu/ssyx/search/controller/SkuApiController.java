@@ -1,4 +1,4 @@
-package com.atguigu.ssyx.search.api;
+package com.atguigu.ssyx.search.controller;
 
 import com.atguigu.ssyx.common.result.Result;
 import com.atguigu.ssyx.search.service.SkuService;

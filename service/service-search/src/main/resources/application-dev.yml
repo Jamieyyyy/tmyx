@@ -15,7 +15,7 @@ spring:
     rest:
       uris: http://118.178.126.76:9200
   rabbitmq:
-    host: 192.168.197.128
+    host: 118.178.126.76
     port: 5672
     username: guest
     password: guest
